@@ -306,7 +306,7 @@ public class Server extends UnicastRemoteObject implements ServerInterface
 			players.addElement(new Player(details[0], nextClient)); 			
 			nextClient.messageFromServer("[Server] : Hello " + details[0] + " you are now in the game.\n");			
 			sendMessageToEveryone("[Server] : " + details[0] + " has started to play in the game.\n");			
-			updateUserList();		
+			refreshTheList();		
 		}
 		catch(RemoteException | MalformedURLException | NotBoundException e){
 			e.printStackTrace();
@@ -327,14 +327,14 @@ public class Server extends UnicastRemoteObject implements ServerInterface
         }
 	
 
-	private void updateUserList() 
+	private void refreshTheList() 
         {
 		String[] currentUsers = getUserList();	
 		for(Player c : players)
                 {
 			try 
                         {
-				c.getClient().updateUserList(currentUsers);
+				c.getClient().refreshTheList(currentUsers);
 			} 
 			catch (RemoteException e) 
                         {
@@ -383,7 +383,7 @@ public class Server extends UnicastRemoteObject implements ServerInterface
 		}		
 		if(!players.isEmpty())
                 {
-			updateUserList();
+			refreshTheList();
 		}			
 	}
 }

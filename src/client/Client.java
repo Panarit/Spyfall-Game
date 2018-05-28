@@ -129,7 +129,7 @@ public class Client  extends UnicastRemoteObject implements ClientInterface
 		chatGUI.textArea.setCaretPosition(chatGUI.textArea.getDocument().getLength());
 	}
 
-	public void updateUserList(String[] currentUsers) throws RemoteException 
+	public void refreshTheList(String[] currentUsers) throws RemoteException 
         {
             chatGUI.userPanel.remove(chatGUI.clientPanel);
             chatGUI.setClientPanel(currentUsers);

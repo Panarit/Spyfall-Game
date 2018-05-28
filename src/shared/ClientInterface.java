@@ -9,7 +9,7 @@ public interface ClientInterface extends Remote
 	
         public void messageFromServer(String message) throws RemoteException;
 
-	public void updateUserList(String[] currentUsers) throws RemoteException;
+	public void refreshTheList(String[] currentUsers) throws RemoteException;
         
         public void disableEverything() throws RemoteException;   
 }
