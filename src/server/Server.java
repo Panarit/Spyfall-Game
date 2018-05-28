@@ -70,7 +70,7 @@ public class Server extends UnicastRemoteObject implements ServerInterface
 		try
                 {
 			ServerInterface hello = new Server();
-			Naming.rebind("rmi://" + hostNameStatic + "/" + serviceName, hello);
+			Naming.rebind("rmi://" + hostNameStatic + ":1099/" + serviceName, hello);
 			System.out.println("RMI Server is running...");
 		}
 		catch(Exception e)
@@ -318,7 +318,7 @@ public class Server extends UnicastRemoteObject implements ServerInterface
             try
             {
 //                String hostName = "192.168.0.26";
-                Naming.rebind("rmi://" + hostName + "/" + serviceName, client);
+                Naming.rebind("rmi://" + hostName + ":1099/" + serviceName, client);
             }
             catch(Exception e)
             {
