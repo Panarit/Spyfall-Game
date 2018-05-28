@@ -124,7 +124,6 @@ public class Client  extends UnicastRemoteObject implements ClientInterface
          
 	public void messageFromServer(String message) throws RemoteException 
         {
-		System.out.println( message );
 		chatGUI.textArea.append( message );
 		chatGUI.textArea.setCaretPosition(chatGUI.textArea.getDocument().getLength());
 	}

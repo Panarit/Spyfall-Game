@@ -295,7 +295,6 @@ public class UI extends JFrame implements ActionListener
 				message = textField.getText();
 				textField.setText("");
 				sendMessage(message);
-				System.out.println("Sending message : " + message);
 			}
 
                         if(e.getSource() == spyButton)
