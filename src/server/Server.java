@@ -91,7 +91,7 @@ public class Server extends UnicastRemoteObject implements ServerInterface
 	public static void startRMIRegistry() 
         {
 //            System.setProperty("java.security.policy", Server.class.getResource("policy.txt").getFile());
-            System.setProperty("java.security.policy", "C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\SpyFall Game\\src\\server\\policy.txt");
+            System.setProperty("java.security.policy", "src\\server\\policy.txt");
             if (System.getSecurityManager() == null) 
             {
             System.setSecurityManager(new SecurityManager());

@@ -42,7 +42,7 @@ public class Client  extends UnicastRemoteObject implements ClientInterface
 //            int number = rand.nextInt(2000) + 2000;
 //            int randomPort = number;
             String hostName2 = JOptionPane.showInputDialog(null, "Write the ip address of the host!");
-            System.setProperty("java.security.policy","C:\\Users\\Lenovo\\Documents\\NetBeansProjects\\SpyFall Game\\src\\server\\policy.txt");
+            System.setProperty("java.security.policy","src\\client\\policy.txt");
             if (System.getSecurityManager() == null) 
             {
             System.setSecurityManager(new SecurityManager());
