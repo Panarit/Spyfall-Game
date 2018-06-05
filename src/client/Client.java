@@ -36,12 +36,15 @@ public class Client  extends UnicastRemoteObject implements ClientInterface
 		this.clientServiceName = "ClientListenService_" + userName;
 	}
 
-	public void startClient(String username) throws RemoteException 
+	
+        /*This method starts the client*/
+        public void startClient(String username) throws RemoteException 
         {
             Random rand = new Random();
 //            int number = rand.nextInt(2000) + 2000;
 //            int randomPort = number;
             String hostName2 = JOptionPane.showInputDialog(null, "Write the ip address of the host!");
+            hostName = hostName2;
             System.setProperty("java.security.policy","src\\client\\policy.txt");
             if (System.getSecurityManager() == null) 
             {

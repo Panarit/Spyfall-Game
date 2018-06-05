@@ -236,7 +236,7 @@ public class UI extends JFrame implements ActionListener
             sendButton = new JButton("Send Message ");
             sendButton.addActionListener(this);
             sendButton.setEnabled(false);
-
+            frame.getRootPane().setDefaultButton(sendButton);
             dummyButton = new JButton("");
 		
             startButton = new JButton("Get in the game ");
